@@ -359,9 +359,9 @@ def predict():
             d_New_Delhi
         ]])
 
-        output=round(prediction[0],2)
+        output=round(prediction[0] * 0.012,2)
 
-        return render_template('Predict.html',prediction_text="Your Flight price is Rs. {}".format(output))
+        return render_template('Predict.html',prediction_text="Your Flight price is USD. {}".format(output))
 
 
     return render_template("Predict.html")
